@@ -69,3 +69,11 @@ export PYTHONPATH=src:$PYTHONPATH
 # run the tests
 pytest ./test/unit_tests
 ```
+
+## Linting and Formatting
+```
+cd ~/eopi_solutions
+export PYTHONPATH=src:$PYTHONPATH
+pycodestyle src # if this outputs nothing, you're good
+pylint src
+```

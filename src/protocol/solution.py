@@ -1,5 +1,2 @@
 class Solution(object):
     pass
-
-
-
