@@ -75,5 +75,5 @@ pytest ./test/unit_tests
 cd ~/eopi_solutions
 export PYTHONPATH=src:$PYTHONPATH
 pycodestyle src # if this outputs nothing, you're good
-pylint src
+pylint src # this will give you a rating out of 10 (always keep it 10/10)
 ```
