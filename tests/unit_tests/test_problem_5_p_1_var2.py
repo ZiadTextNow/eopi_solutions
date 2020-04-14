@@ -2,7 +2,7 @@ import pytest
 from vlad.problem_5_p_1_var2_vlad import Problem5P1Var2Vlad
 
 
-class TestProblem5P1Var1(object):
+class TestProblem5P1Var2(object):
     def instantiate_solution(self):
         return Problem5P1Var2Vlad()
 
