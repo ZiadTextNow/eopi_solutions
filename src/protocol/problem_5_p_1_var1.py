@@ -1,7 +1,7 @@
 from protocol.errors import EOPINotImplementedError
 
 
-class Problem5P1(object):
-    def dutch_flag_partition(self, pivot_index, unpartitioned_list):
+class Problem5P1Var1(object):
+    def three_val_partition(self, unpartitioned_list):
         raise EOPINotImplementedError()
 

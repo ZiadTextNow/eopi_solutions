@@ -1,9 +1,10 @@
 from protocol.problem_5_p_1 import Problem5P1
 
 """
-THINGS TO NOTE unpartitioned_listBOUT THIS PROBLEM
+THINGS TO NOTE ABOUT THIS PROBLEM
 
 """
+
 
 class Problem5P1Vlad(Problem5P1):
     def dutch_flag_partition(self, pivot_index, unpartitioned_list):
@@ -24,6 +25,7 @@ class Problem5P1Vlad(Problem5P1):
                 unpartitioned_list[high_idx], unpartitioned_list[index] = unpartitioned_list[index], unpartitioned_list[high_idx]
                 high_idx -= 1
 
+    # @staticmethod
     def one_pass_dutch_flag_partition(self, pivot, unpartitioned_list):
         low_idx = 0   # leftmost value that is == pivot
         unknown_idx = 0   # idx of the leftmost unknown value
