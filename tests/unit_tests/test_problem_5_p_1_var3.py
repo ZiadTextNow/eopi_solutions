@@ -12,7 +12,7 @@ class TestProblem5P1Var3(object):
         ([True] * 3, [True] * 3),
         ([False] * 3, [False] * 3),
     ])
-    def test_four_val_partition(self, unpartitioned_list, partitioned_list):
+    def test_bool_val_partition(self, unpartitioned_list, partitioned_list):
         self.instantiate_solution().bool_val_partition(unpartitioned_list)
         assert unpartitioned_list == partitioned_list
 
