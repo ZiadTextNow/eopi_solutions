@@ -15,13 +15,20 @@ class TestProblem5P1Var1(object):
     def test_three_val_partition(self, unpartitioned_list):
         copy_unpartitioned_list = list(unpartitioned_list)   # keep a copy of original list for value comparison later
         self.instantiate_solution().three_val_partition(unpartitioned_list)
+        # the list is partitioned in three groups if walking through the list only detects two value changes
         value_changes = 0
         prev_val = unpartitioned_list[0]
+        all_vals_list = [prev_val]
         for val in unpartitioned_list:
             if val != prev_val:
                 value_changes += 1
+                all_vals_list.append(val)
             prev_val = val
         assert value_changes == 2
+        assert len(copy_unpartitioned_list) == len(unpartitioned_list)
+        # check that values in the partitioned list as actually the same values that appeared in the original list
+        for val in all_vals_list:
+            assert val in copy_unpartitioned_list
 
 
 
