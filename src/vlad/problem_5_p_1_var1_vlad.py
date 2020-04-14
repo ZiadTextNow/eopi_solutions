@@ -17,24 +17,24 @@ class Problem5P1Var1Vlad(Problem5P1Var1):
 
     # I'm impressed this worked!
     def modified_dutch_flag_partition(self, unpartitioned_list):
-        first_val = unpartitioned_list[0]
-        first_ptr = 0
-        second_val = None
-        second_ptr = len(unpartitioned_list) - 1
+        start_val = unpartitioned_list[0]
+        start_ptr = 0
+        end_val = None
+        end_ptr = len(unpartitioned_list) - 1
         unknown_ptr = 0
-        while unknown_ptr <= second_ptr:
-            if unpartitioned_list[unknown_ptr] == first_val:
-                unpartitioned_list[first_ptr], unpartitioned_list[unknown_ptr] = unpartitioned_list[unknown_ptr], \
-                                                                                 unpartitioned_list[first_ptr]
-                first_ptr += 1
+        while unknown_ptr <= end_ptr:
+            if unpartitioned_list[unknown_ptr] == start_val:
+                unpartitioned_list[start_ptr], unpartitioned_list[unknown_ptr] = unpartitioned_list[unknown_ptr], \
+                                                                                 unpartitioned_list[start_ptr]
+                start_ptr += 1
                 unknown_ptr += 1
-            # only modification required to set the second_val since we don't know what it is at the start
-            elif second_val is None:
-                second_val = unpartitioned_list[unknown_ptr]
-            elif unpartitioned_list[unknown_ptr] == second_val:
-                unpartitioned_list[second_ptr], unpartitioned_list[unknown_ptr] = unpartitioned_list[unknown_ptr], \
-                                                                                  unpartitioned_list[second_ptr]
-                second_ptr -= 1
+            # only modification required to set the end_val since we don't know what it is at the start
+            elif end_val is None:
+                end_val = unpartitioned_list[unknown_ptr]
+            elif unpartitioned_list[unknown_ptr] == end_val:
+                unpartitioned_list[end_ptr], unpartitioned_list[unknown_ptr] = unpartitioned_list[unknown_ptr], \
+                                                                                  unpartitioned_list[end_ptr]
+                end_ptr -= 1
             else:
                 unknown_ptr += 1
         print(unpartitioned_list)
