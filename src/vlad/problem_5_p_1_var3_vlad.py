@@ -19,6 +19,6 @@ class Problem5P1Var3Vlad(Problem5P1Var3):
             elif unpartitioned_list[end_ptr]:
                 end_ptr -= 1
             else:
-                unpartitioned_list[start_ptr], unpartitioned_list[end_ptr] = unpartitioned_list[end_ptr], unpartitioned_list[start_ptr]
+                unpartitioned_list[start_ptr], unpartitioned_list[end_ptr] = unpartitioned_list[end_ptr], \
+                                                                             unpartitioned_list[start_ptr]
                 start_ptr, end_ptr = start_ptr + 1, end_ptr - 1
-
