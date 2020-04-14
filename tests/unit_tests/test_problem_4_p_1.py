@@ -20,7 +20,3 @@ class TestProblem4P1(object):
     ])
     def test_get_parity(self, num, parity):
         assert self.instantiate_solution().get_parity(num) == parity
-        # try:
-        #     assert self.instantiate_solution().get_parity(num) == parity  == parity
-        # except Exception:
-        #     pass
