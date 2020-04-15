@@ -7,13 +7,13 @@ THINGS TO NOTE ABOUT THIS PROBLEM
 
 
 class Problem5P18Var5Vlad(Problem5P18Var5):
-    def last_elem_spiral_order(self, non_sqr_matricolumn):
-        return self.constant_lookup(non_sqr_matricolumn)
+    def last_elem_spiral_order(self, non_sqr_matrix):
+        return self.constant_lookup(non_sqr_matrix)
 
     # this is some weird math thing I thought of that works in constant time and is kinda messy
-    def constant_lookup(self, non_sqr_matricolumn):
-        num_rows = len(non_sqr_matricolumn)
-        num_columns = len(non_sqr_matricolumn[0])
+    def constant_lookup(self, non_sqr_matrix):
+        num_rows = len(non_sqr_matrix)
+        num_columns = len(non_sqr_matrix[0])
         if num_columns >= num_rows:
             column_offset = (num_rows - 1) // 2
             row_offset = (num_rows - 1) // 2
@@ -37,5 +37,5 @@ class Problem5P18Var5Vlad(Problem5P18Var5):
                 row = num_rows - 1 - row_offset
             else:
                 row = row_offset
-        return non_sqr_matricolumn[row][column]
+        return non_sqr_matrix[row][column]
 
