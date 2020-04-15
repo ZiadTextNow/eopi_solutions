@@ -7,7 +7,7 @@ class TestProblem5P18Var5(object):
         return Problem5P18Var5Vlad()
 
     @pytest.mark.parametrize("non_sqr_matrix, last_elem", [
-        # ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 5),
+        ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 5),
         ([[1, 2, 3], [7, 8, 9]], 7),
         ([[1, 2, 3]], 3),
         ([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]], 10),
