@@ -4,6 +4,8 @@ import random
 """
 THINGS TO NOTE ABOUT THIS PROBLEM
 
+Problem 5.12var1 was not coded since there is no coding really involved. It is answered here:
+https://www.quora.com/The-rand-function-in-the-standard-C-library-returns-a-uniformly-random-number-in-0-RAND_MAX-1-Does-rand-mod-n-generate-a-number-uniformly-distributed-0-n-1
 """
 
 
