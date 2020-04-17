@@ -1,5 +1,4 @@
 from protocol.problem_6_p_4 import Problem6P4
-import string
 
 """
 THINGS TO NOTE ABOUT THIS PROBLEM
