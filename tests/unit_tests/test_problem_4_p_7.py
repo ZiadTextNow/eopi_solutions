@@ -1,9 +1,12 @@
 import pytest
+
+from arshan.problem_4_p_7_arshan import Problem4P7Arshan
 from vlad.problem_4_p_7_vlad import Problem4P7Vlad
 
 
 class TestProblem4P1(object):
     def instantiate_solution(self):
+        return Problem4P7Arshan()
         return Problem4P7Vlad()
 
     @pytest.mark.parametrize("x, y, expected", [
