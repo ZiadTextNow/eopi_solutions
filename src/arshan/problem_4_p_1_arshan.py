@@ -3,9 +3,9 @@ from protocol.problem_4_p_1 import Problem4P1
 
 class Problem4P1Arshan(Problem4P1):
     def get_parity(self, num):
+        return self.clear_least_bit(num)
         return self.use_what_uve_seen_so_far({}, num)
-        return self.set_least_bit(num)
-
+        return self.brute_force(num)
 
     """
     I came up with this myself.
@@ -20,7 +20,7 @@ class Problem4P1Arshan(Problem4P1):
     """
     This BLEW my mind. Very cool.
     """
-    def set_least_bit(self, num):
+    def clear_least_bit(self, num):
         parity = 0
         while num:
             parity ^= 1
@@ -32,7 +32,7 @@ class Problem4P1Arshan(Problem4P1):
 
     """
     This is some weird binary divide-and-conquer dynamic programming bullshit I
-    came up with, works tho. 
+    came up with, it doesn't work either. piece of shit.
     """
     def use_what_uve_seen_so_far(self, lookup, num):
         lookup = lookup or {
@@ -51,6 +51,7 @@ class Problem4P1Arshan(Problem4P1):
                 chunk = num & mask
                 parity ^= self.use_what_uve_seen_so_far(lookup, chunk)
                 num >>= biggest_length
+                continue
             if num in lookup[num_length]:
                 return lookup[num_length][num]
             first_half = num & ((1 << (num_length >> 1)) - 1)

@@ -5,8 +5,8 @@ from vlad.problem_4_p_1_vlad import Problem4P1Vlad
 
 class TestProblem4P1(object):
     def instantiate_solution(self):
-        return Problem4P1Vlad()
-        # return Problem4P1Arshan()
+        #return Problem4P1Vlad()
+        return Problem4P1Arshan()
 
     @pytest.mark.parametrize("num, parity", [
         (1, 1),
