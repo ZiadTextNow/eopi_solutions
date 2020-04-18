@@ -6,6 +6,11 @@ class Problem7P1(object):
         raise EOPINotImplementedError()
 
 
+"""
+not sure if both these classes below should be implemented here. The rationale was that these are essential to solving
+the problem ,but are not part of the actual problem. They are used in the test cases and since we share test cases I 
+didn't find it right for the test case to import from say problem_7_p_1_vlad since that is a solution specific to me. 
+"""
 class ListNode(object):
     def __init__(self, data=None, next=None):
         self.data = data
