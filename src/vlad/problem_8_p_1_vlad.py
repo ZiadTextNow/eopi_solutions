@@ -17,19 +17,26 @@ class Problem8P1Vlad(Problem8P1):
                 for val in stack_vals:
                     self.push(val)
 
-        def get_max(self):
+        def max(self):
+            if self.empty():
+                raise IndexError('max(): empty stack')
             return self.peek().max if self.peek() else None
 
         def push(self, val):
-            max_val = max(val, self.get_max()) if self.stack else val
+            max_val = max(val, self.max()) if self.stack else val
             elem = StackElem(val, max_val)
             self.stack.append(elem)
 
         def pop(self):
-            return self.stack.pop()
+            if self.empty():
+                raise IndexError('max(): empty stack')
+            return self.stack.pop().val
 
         def peek(self):
             return self.stack[-1] if self.stack else None
+
+        def empty(self):
+            return len(self.stack) == 0
 
 class StackElem(object):
     def __init__(self, val, max_val):
