@@ -20,7 +20,9 @@ class Problem9P1Vlad(Problem9P1):
     def book_soln_with_one_return_var(self, binary_tree):
         def inner_func(binary_tree):
             if not binary_tree:
+                # this must be > 0 for the checks below to work, namely not right_tree_height or not left_tree_height
                 return 1
+
             right_tree_height = inner_func(binary_tree.right)
             left_tree_height = inner_func(binary_tree.left)
 
