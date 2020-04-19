@@ -2,6 +2,11 @@ import pytest
 from vlad.problem_7_p_1_vlad import Problem7P1Vlad
 from protocol.problem_7_p_1 import LinkedList
 
+"""
+The testing for the LinkedList methods needs a better naming convention or some way to know that we are testing from
+functions from protocol directory and from which class even. Not sure what the best way to do this is. For now I kept
+this for this test and other problems to come :(
+"""
 
 class TestProblem7P1(object):
     def instantiate_solution(self):
