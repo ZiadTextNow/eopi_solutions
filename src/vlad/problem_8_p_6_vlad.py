@@ -4,6 +4,13 @@ from collections import deque
 """
 THINGS TO NOTE ABOUT THIS PROBLEM
 
+Problem 8.6var1 was trivial so was not explicitly done. You do exactly same thing as in this solution except every other
+level you just pop instead of popleft (use a stack instead of queue)
+Problem 8.6var2 was trivial so was not explicitly done. You do exactly same thing as in this solution except at the end
+you reverse the result list using a linear algorithm with no memory requirement like solution to problem 7.2
+I wonder if this problem can be solved using a different approach (like using a different search)
+Problem 8.6var3 was trivial so was not explicitly done. You do exactly same thing as in this solution except after the 
+list is created for each level just take the average. 
 """
 
 
