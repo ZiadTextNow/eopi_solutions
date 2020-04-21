@@ -5,6 +5,8 @@ import math
 """
 THINGS TO NOTE ABOUT THIS PROBLEM
 
+Problem 10.4var1 was trivial so was not explicitly done. You do exactly same thing as in this solution except you just 
+start printing the max element in the heap for each new element added once your heap has reached size k 
 """
 
 
