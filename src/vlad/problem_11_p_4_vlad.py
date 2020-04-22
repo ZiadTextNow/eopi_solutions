@@ -29,6 +29,17 @@ class Problem11P4Vlad(Problem11P4):
                 best_result_so_far = half
         return best_result_so_far
 
+    def book_soln(self, non_neg_int):
+        start, end = 0, non_neg_int
+        while end >= start:
+            half = start + (end - start) // 2
+            half_sqr = half ** 2
+            if half_sqr <= non_neg_int:
+                start = half + 1
+            elif half_sqr > non_neg_int:
+                end = half - 1
+        return start - 1   # this is smart since start is always going to 1 more than the correct value
+
     def recursive_modified_bsearch(self, non_neg_int):
         def inner_func(start, end):
             if end < start:
