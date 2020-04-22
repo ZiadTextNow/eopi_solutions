@@ -11,5 +11,5 @@ class TestProblem11P1(object):
         ([1, 2, 3, 3, 3, 4, 5], 3, 2),
         ([1, 1, 1], 1, 0),
     ])
-    def test_merge_sorted_lists(self, sorted_list, k, k_idx):
+    def test_first_occurrence_of_k(self, sorted_list, k, k_idx):
         assert self.instantiate_solution().first_occurrence_of_k(sorted_list, k) == k_idx
