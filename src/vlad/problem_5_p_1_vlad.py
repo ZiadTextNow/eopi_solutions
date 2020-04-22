@@ -11,6 +11,7 @@ class Problem5P1Vlad(Problem5P1):
         pivot = unpartitioned_list[pivot_index]
         # self.two_pass_dutch_flag_partition(pivot, unpartitioned_list)
         self.one_pass_dutch_flag_partition(pivot, unpartitioned_list)
+        return unpartitioned_list
 
     def two_pass_dutch_flag_partition(self, pivot, unpartitioned_list):
         low_idx = 0   # leftmost value that is > pivot
