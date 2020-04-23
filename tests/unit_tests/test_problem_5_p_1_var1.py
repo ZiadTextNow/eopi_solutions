@@ -1,9 +1,12 @@
 import pytest
+
+from arshan.problem_5_p_1_var1_arshan import Problem5P1Var1Arshan
 from vlad.problem_5_p_1_var1_vlad import Problem5P1Var1Vlad
 
 
 class TestProblem5P1Var1(object):
     def instantiate_solution(self):
+        return Problem5P1Var1Arshan()
         return Problem5P1Var1Vlad()
 
     @pytest.mark.parametrize("unpartitioned_list", [

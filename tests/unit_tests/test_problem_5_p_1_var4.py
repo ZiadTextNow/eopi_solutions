@@ -1,9 +1,12 @@
 import pytest
+
+from arshan.problem_5_p_1_var4_arshan import Problem5P1Var4Arshan
 from vlad.problem_5_p_1_var4_vlad import Problem5P1Var4Vlad
 
 
 class TestProblem5P1Var4(object):
     def instantiate_solution(self):
+        return Problem5P1Var4Arshan()
         return Problem5P1Var4Vlad()
 
     # True values were assigned integer values equal to list indices from 1 (couldn't start from 0 since 0 == False)

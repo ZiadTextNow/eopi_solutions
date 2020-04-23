@@ -5,7 +5,7 @@ class Problem4P1Arshan(Problem4P1):
     def get_parity(self, num):
         return self.clear_least_bit(num)
         return self.use_what_uve_seen_so_far({}, num)
-        return self.brute_force(num)
+        return self.brute_force_with_lookup(num)
 
     """
     I came up with this myself.

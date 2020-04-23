@@ -12,6 +12,7 @@ https://www.quora.com/The-rand-function-in-the-standard-C-library-returns-a-unif
 class Problem5P12Vlad(Problem5P12):
     def random_sampling(self, distinct_elem_list, size):
         self.per_element_random_sampling(distinct_elem_list, size)
+        return distinct_elem_list
 
     # the random list of size elements is the last size elements of distinct_elem_list
     def per_element_random_sampling(self, distinct_elem_list, size):
