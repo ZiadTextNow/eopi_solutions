@@ -14,5 +14,5 @@ class TestProblem11P8(object):
         (list(range(10)), 10, 0),
         (list(range(10)), 5, 5),
     ])
-    def test_integer_square_root(self, non_sorted_list, k, kth_largest_element):
+    def test_kth_largest_element(self, non_sorted_list, k, kth_largest_element):
         assert self.instantiate_solution().kth_largest_element(non_sorted_list, k) == kth_largest_element
