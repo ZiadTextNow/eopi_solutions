@@ -1,10 +1,11 @@
 import pytest
 from vlad.problem_5_p_6_vlad import Problem5P6Vlad
-
+# from ziad.problem_5_p_6_ziad import Problem5P6Ziad
 
 class TestProblem5P6(object):
     def instantiate_solution(self):
         return Problem5P6Vlad()
+        # return Problem5P6Ziad()
 
     @pytest.mark.parametrize("prices, max_profit", [
         ([1, 2, 3], 2),

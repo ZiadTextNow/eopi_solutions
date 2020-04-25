@@ -60,9 +60,9 @@ class Problem4P1Ziad(Problem4P1):
         return ones % 2 == 1
 
     '''
-    This is a pretty well-known solution with the advantage of being the
-    most efficient solution (O(log(n) runtime) but with the limitation of only
-    working with 64-bit numbers or smaller.
+    This is a pretty well-known solution that uses XOR and bit-shifting, with the advantage of being the
+    most efficient solution (O(log(n) runtime) and with the limitation of only
+    working with pre-established number sizes (in this case, 64-bit numbers or smaller)
     '''
     def bit_manipulation_with_XOR(self, num):
         num ^= num >> 32
@@ -75,6 +75,13 @@ class Problem4P1Ziad(Problem4P1):
 
  #TODO: Cache-based implementation
 
+# The trick here is realizing that we don't need to store 2^64
+# integers into the cache - in fact, we get the advantage of using a cache
+# by simply grouping a number's bits into x nonoverlapping y-bit sub words (e.g. for a 64-bit
+# number, we could group them into 4 nonoverlapping 16-bit sub words)
+# We then compute the parity of each sub word, and then compute the parity of each sub result
+# pro: works well when the number of bits used for the number in question evenly divides into a power of 2
+# This solution is already in EOPI.
 
 
 

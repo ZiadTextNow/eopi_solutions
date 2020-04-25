@@ -1,10 +1,11 @@
 import pytest
 from vlad.problem_5_p_6_var1_vlad import Problem5P6Var1Vlad
-
+# from ziad.problem_4_p_1_var1_ziad import Problem5P6Var1Ziad
 
 class TestProblem5P6Var1(object):
     def instantiate_solution(self):
         return Problem5P6Var1Vlad()
+        # return Problem5P6Var1Ziad()
 
     @pytest.mark.parametrize("int_list, longest_sublist", [
         ([1, 2, 2], 2),

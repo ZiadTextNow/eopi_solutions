@@ -1,10 +1,12 @@
 import pytest
-from vlad.problem_5_p_1_vlad import Problem5P1Vlad
+# from vlad.problem_5_p_1_vlad import Problem5P1Vlad
+from ziad.problem_4_p_1_ziad import Problem4P1Ziad
 
 
 class TestProblem5P1(object):
     def instantiate_solution(self):
-        return Problem5P1Vlad()
+        # return Problem5P1Vlad()
+        return Problem4P1Ziad
 
     """
     equal_idx is leftmost idx where value == pivot

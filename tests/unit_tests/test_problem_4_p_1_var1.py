@@ -2,12 +2,14 @@ import pytest
 
 from arshan.problem_4_p_1_var1_arshan import Problem4P1Var1Arshan
 from vlad.problem_4_p_1_var1_vlad import Problem4P1Var1Vlad
+# from ziad.problem_4_p_1_var1_ziad import Problem4P1ZiadVar1
 
 
 class TestProblem4P1(object):
     def instantiate_solution(self):
         return Problem4P1Var1Arshan()
         return Problem4P1Var1Vlad()
+        # return Problem4P1Var1Ziad()
 
     @pytest.mark.parametrize("num, expected", [
         (0b01010000, 0b01011111),
