@@ -26,6 +26,24 @@ class Problem5P1Vlad(Problem5P1):
                 unpartitioned_list[high_idx], unpartitioned_list[index] = unpartitioned_list[index], unpartitioned_list[high_idx]
                 high_idx -= 1
 
+    # [1, 3, 4 ,1 ,5 ,5, 5, 6, 7, 6]
+    # pivot = 5
+
+    """
+    group1 < 5
+    group2 = 5
+    group3 > 5
+    group4 = 6
+    group = 7
+    l_ptr 
+    r_l_ptr
+    l_r_ptr
+    r_ptr
+    """
+
+
+
+
     # @staticmethod
     def one_pass_dutch_flag_partition(self, pivot, unpartitioned_list):
         low_idx = 0   # leftmost value that is == pivot
