@@ -11,6 +11,7 @@ import functools
 class Problem6P1Ziad(Problem6P1):
     def str_to_int(self, str_of_int):
         return self.more_elegant_str_to_int(str_of_int)
+        # return self.str_to_int_using_reduce(str_of_int)
 
     def int_to_str(self, int_of_str):
         return self.naive_int_to_str(int_of_str)
@@ -45,7 +46,7 @@ class Problem6P1Ziad(Problem6P1):
         int_so_far = 0
         tens_counter = 0
 
-        for char in reversed(str_of_int):
+        for char in str_of_int:
             if char == "-":
                 continue
 
