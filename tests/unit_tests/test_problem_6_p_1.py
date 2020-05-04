@@ -1,13 +1,17 @@
 import pytest
+
+from arshan.problem_6_p_1_arshan import Problem6P1Arshan
 from vlad.problem_6_p_1_vlad import Problem6P1Vlad
 
 
 class TestProblem6P1(object):
     def instantiate_solution(self):
+        #return Problem6P1Arshan()
         return Problem6P1Vlad()
 
     @pytest.mark.parametrize("int_of_str, str_of_int", [
         (123, '123'),
+        (1, '1'),
         (0, '0'),
         (192837465, '192837465'),
         (-123, '-123'),
@@ -19,6 +23,8 @@ class TestProblem6P1(object):
     @pytest.mark.parametrize("str_of_int, int_of_str", [
         ('123', 123),
         ('0', 0),
+        ('0001', 1),
+        ('-0001', -1),
         ('192837465', 192837465),
         ('-123', -123),
         ('-0', 0),

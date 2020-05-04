@@ -1,9 +1,12 @@
 import pytest
+
+from arshan.problem_8_p_1_arshan import Problem8P1Arshan
 from vlad.problem_8_p_1_vlad import Problem8P1Vlad
 
 
 class TestProblem8P1(object):
     def instantiate_solution(self):
+        return Problem8P1Arshan()
         return Problem8P1Vlad()
 
     @pytest.mark.parametrize("push_vals, expected_stack", [
@@ -18,7 +21,8 @@ class TestProblem8P1(object):
         I don't like that this assumes stack.pop() works but if I accessed elements by indices than I would have to
         get their .val attribute which is not a generic case and specific to my solution only
         """
-        while stack.stack:
+        #while stack.stack:
+        while not stack.is_empty():
             assert stack.pop() == expected_stack.pop()
 
     @pytest.mark.parametrize("stack_vals, pop_count, expected_stack", [
@@ -29,7 +33,9 @@ class TestProblem8P1(object):
         stack = self.instantiate_solution().StackWithMax(stack_vals)
         for _ in range(pop_count):
             stack.pop()
-        while stack.stack:
+
+        #while stack.stack:
+        while not stack.is_empty():
             assert stack.pop() == expected_stack.pop()
 
     @pytest.mark.parametrize("stack_vals, pop_count", [
