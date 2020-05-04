@@ -1,5 +1,6 @@
 import pytest
 from vlad.problem_7_p_1_vlad import Problem7P1Vlad
+from ziad.problem_7_p_1_ziad import Problem7P1Ziad
 from protocol.problem_7_p_1 import LinkedList
 
 """
@@ -11,6 +12,7 @@ this for this test and other problems to come :(
 class TestProblem7P1(object):
     def instantiate_solution(self):
         return Problem7P1Vlad()
+        # return Problem7P1Ziad()
 
     @pytest.mark.parametrize("list_a", [
         [1, 2, 3],

@@ -5,7 +5,7 @@ from vlad.problem_5_p_1_var1_vlad import Problem5P1Var1Vlad
 
 
 class TestProblem5P1Var1(object):
-    def instantiate_solution(self):
+    def insta`ntiate_solution(self):
         return Problem5P1Var1Arshan()
         return Problem5P1Var1Vlad()
 
