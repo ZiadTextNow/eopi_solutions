@@ -1,4 +1,6 @@
 import pytest
+
+from arshan.problem_7_p_1_var1_arshan import Problem7P1Var1Arshan
 from vlad.problem_7_p_1_var1_vlad import Problem7P1Var1Vlad
 from ziad.problem_7_p_1_var1_ziad import Problem7P1Var1Ziad
 from protocol.problem_7_p_1_var1 import DoublyLinkedList
@@ -6,6 +8,7 @@ from protocol.problem_7_p_1_var1 import DoublyLinkedList
 
 class TestProblem7P1Var1(object):
     def instantiate_solution(self):
+        return Problem7P1Var1Arshan()
         return Problem7P1Var1Vlad()
         # return Problem7P1Var1Ziad()
 
