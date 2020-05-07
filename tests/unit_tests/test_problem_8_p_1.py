@@ -7,9 +7,9 @@ from ziad.problem_8_p_1_ziad import Problem8P1Ziad
 
 class TestProblem8P1(object):
     def instantiate_solution(self):
+        #return Problem8P1Ziad()
         return Problem8P1Arshan()
         return Problem8P1Vlad()
-        # return Problem8P1Ziad()
 
     @pytest.mark.parametrize("push_vals, expected_stack", [
         ([1, 2, 3], [1, 2, 3]),

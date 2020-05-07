@@ -7,6 +7,51 @@ class Problem8P1Arshan(Problem8P1):
             self.value = None
             self.next = None
 
+    class StackWithMaxNormalList(object):
+        def __init__(self, vals=None):
+            self.stack = vals or []
+            self.maxes = []
+
+        def _check_empty(self):
+            if not self.maxes:
+                raise IndexError("Stack is empty")
+
+        def max(self):
+            self._check_empty()
+            return self.maxes[-1][0]
+
+        def push(self, elem):
+            if not self.stack:
+                self.maxes.append((elem, 1))
+            else:
+                self._add_new_max(elem)
+            self.stack.append(elem)
+
+        def _add_new_max(self, new_max):
+            curr_max, curr_count = self.maxes[-1]
+            if new_max > curr_max:
+                self.maxes.append((new_max, 1))
+            elif new_max == curr_max:
+                self.maxes[-1] = (
+                    curr_max,
+                    curr_count + 1
+                )
+
+        def _pop_max(self):
+            curr_max, count = self.maxes[-1]
+            count -= 1
+            if count:
+                self.maxes[-1] = (curr_max, count)
+            else:
+                self.maxes.pop()
+            return curr_max
+
+        def pop(self):
+            self._check_empty()
+            if self.stack[-1] == self.max():
+                return self._pop_max()
+            return self.stack.pop()
+
     class StackWithMaxLinkedList(object):
         def __init__(self, vals=None):
             self.head = None
