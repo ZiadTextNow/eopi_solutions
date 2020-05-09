@@ -1,10 +1,13 @@
 import pytest
+
+from arshan.problem_9_p_1_var2_arshan import Problem9P1Var2Arshan
 from vlad.problem_9_p_1_var2_vlad import Problem9P1Var2Vlad
 from protocol.problem_9_p_1 import BinaryTree
 
 
 class TestProblem9P1Var2(object):
     def instantiate_solution(self):
+        return Problem9P1Var2Arshan()
         return Problem9P1Var2Vlad()
 
     @pytest.mark.parametrize("tree_data, k, not_k_balanced_node_data", [

@@ -1,22 +1,21 @@
 import random
 
-from matplotlib import pyplot
-from arshan.problem_5_p_12_arshan import Problem5P12Arshan
-
 if __name__ == '__main__':
-    summations = []
-    one = []
-    two = []
-    gran = 10000
-    for _ in range(100000):
-        dice1 = random.randint(1, gran)
-        one.append(dice1)
-        dice2 = random.randint(1, gran)
-        two.append(dice2)
-        summations.append(dice1 + dice2)
-    _ = pyplot.hist(summations, bins=2*gran)
-    _ = pyplot.hist(one, bins=2*gran)
-    _ = pyplot.hist(two, bins=2*gran)
-    pyplot.show()
 
+    def func_that_deals_with_lists(the_list):
+        the_list += [7]
 
+    some_list = [1]
+    func_that_deals_with_lists(some_list)
+    print(some_list)
+
+    def func_that_deals_with_dicts(the_dict):
+        the_dict = {
+            'blah': the_dict
+        }
+
+    some_dict = {
+        'boo': 'fee'
+    }
+    func_that_deals_with_dicts(some_dict)
+    print(some_dict)

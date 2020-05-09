@@ -1,9 +1,12 @@
 import pytest
+
+from arshan.problem_10_p_1_arshan import Problem10P1Arshan
 from vlad.problem_10_p_1_vlad import Problem10P1Vlad
 
 
 class TestProblem10P1(object):
     def instantiate_solution(self):
+        return Problem10P1Arshan()
         return Problem10P1Vlad()
 
     @pytest.mark.parametrize("stock_price_lists, result_list", [
