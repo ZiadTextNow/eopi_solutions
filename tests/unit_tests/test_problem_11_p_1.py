@@ -1,10 +1,12 @@
 import pytest
 from vlad.problem_11_p_1_vlad import Problem11P1Vlad
+from ziad.problem_11_p_1_ziad import Problem11P1Ziad
 
 
 class TestProblem11P1(object):
     def instantiate_solution(self):
         return Problem11P1Vlad()
+        # return Problem11P1Ziad()
 
     @pytest.mark.parametrize("sorted_list, k, k_idx", [
         ([1, 2, 3, 4, 5], 3, 2),

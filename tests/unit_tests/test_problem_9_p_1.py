@@ -1,11 +1,13 @@
 import pytest
-from vlad.problem_9_p_1_vlad import Problem9P1Vlad
+# from vlad.problem_9_p_1_vlad import Problem9P1Vlad
+from ziad.problem_9_p_1_ziad import Problem9P1Ziad
 from protocol.problem_9_p_1 import BinaryTree
 
 
 class TestProblem9P1(object):
     def instantiate_solution(self):
-        return Problem9P1Vlad()
+        # return Problem9P1Vlad()
+        return Problem9P1Ziad()
 
     @pytest.mark.parametrize("insert_data, expected_in_order_walk", [
         ([2, 3, 1], [1, 2, 3]),
