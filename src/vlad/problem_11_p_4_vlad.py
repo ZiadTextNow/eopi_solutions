@@ -3,10 +3,6 @@ from protocol.problem_11_p_4 import Problem11P4
 """
 THINGS TO NOTE ABOUT THIS PROBLEM
 
-This is exactly the same problem as the having infinitely many identical eggs that all break starting at floor x and
-onward and you have to fly floor x since all floors before floor x can be considered as 0 and all floors x and up can 
-be 1. Then you have to find the first occurrence of 1 which would k in the general case of this problem!
-Had the egg problem for google interview FYI
 """
 
 
