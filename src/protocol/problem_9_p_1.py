@@ -6,6 +6,114 @@ class Problem9P1(object):
         raise EOPINotImplementedError()
 
 
+class BinaryTreeFactory(object):
+    """
+    A helper class for constructing more, different kinds of binary tree,
+    not necessarily sorted or balanced... This is used in more miscellaneous test cases.
+    """
+
+    """
+    here, we can create a tree from a dict, each node in the dict has l, r, and v:
+        l: left
+        r: right
+        v: value
+    e.g: {v:1, l: None, r: None} is:
+        1
+    e.g: {
+            v: 1,
+            l: None
+            r: {
+                v: 1,
+                l: None,
+                r: None
+            }
+         } 
+         is:
+    1
+      \ 
+        1
+    A more complex tree: 
+    {
+        v: 1,
+        l: {
+            v: 1,
+            l: None,
+            r: None
+        },
+        r: {
+            v: 0,
+            l: {
+                v:1,
+                l: None,
+                r: None
+            }
+            r: {
+                v: 0,
+                l: {
+                    v: 5, # we can ommit left and right, they're assumed to be None
+                },
+                r: {
+                    v: 7,
+                    r: {
+                        v: 8,
+                    }
+                }
+            }
+        }
+    }
+    leads to: 
+          1
+        /    \ 
+       1      0
+             /  \ 
+            1    0 
+                / \ 
+               5   7
+                    \ 
+                      8
+    """
+    @classmethod
+    def construct_binary_tree_from_dict(cls, elements):
+        if not elements or 'v' not in elements:
+            return None
+        root_node, left_node, right_node = BinaryTreeNode(data=elements['v']), None, None
+        if 'l' in elements:
+            left_node = cls.construct_binary_tree_from_dict(elements['l'])
+        if 'r' in elements:
+            right_node = cls.construct_binary_tree_from_dict(elements['r'])
+        root_node.left = left_node
+        root_node.right = right_node
+        return root_node
+
+    @classmethod
+    def right_node_left_walk(cls, node):
+        return cls.ordered_walk(node, 'rnl')
+
+    @classmethod
+    def node_left_right_walk(cls, node):
+        return cls.ordered_walk(node, 'nlr')
+
+    @classmethod
+    def left_node_right_walk(cls, node):
+        return cls.ordered_walk(node, 'lnr')
+
+    @classmethod
+    def ordered_walk(cls, node, order):
+        def _ordered_recursive(node, out):
+            order_lookup = {
+                'l': lambda node, out: _ordered_recursive(node.left, out),
+                'r': lambda node, out: _ordered_recursive(node.right, out),
+                'n': lambda node, out: out.append(node.data),
+            }
+            if not node:
+                return
+            for c in order:
+                order_lookup[c](node, out)
+        out = []
+        _ordered_recursive(node, out)
+        return out
+
+
 # copied from page 112 of the book
 class BinaryTreeNode(object):
     def __init__(self, data=None, left=None, right=None):

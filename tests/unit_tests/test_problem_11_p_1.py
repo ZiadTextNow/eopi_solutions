@@ -1,10 +1,13 @@
 import pytest
+
+from arshan.problem_11_p_1_arshan import Problem11P1Arshan
 from vlad.problem_11_p_1_vlad import Problem11P1Vlad
 from ziad.problem_11_p_1_ziad import Problem11P1Ziad
 
 
 class TestProblem11P1(object):
     def instantiate_solution(self):
+        return Problem11P1Arshan()
         return Problem11P1Vlad()
         # return Problem11P1Ziad()
 
