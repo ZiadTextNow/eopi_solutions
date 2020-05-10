@@ -11,8 +11,7 @@ def naive_search_first_occurrence_of_element_greater_than_k(arr, k):
     lower, upper = 0, len(arr) - 1
     adjusted_k = k
 
-    # this is O(n) unfortunately...
-    while adjusted_k not in arr:
+    while adjusted_k not in arr and arr[upper] > adjusted_k:
         adjusted_k += 1
 
     last_occurrence_of_k = -1
@@ -41,7 +40,7 @@ def better_search_first_occurrence_of_element_greater_than_k(arr, k):
     while lower <= upper:
         midpoint = lower + (upper - lower) // 2
 
-        if k <= arr[midpoint]:
+        if k < arr[midpoint]:
             first_occurrence_of_next_greater_element = midpoint
             upper = midpoint - 1
         else:
